@@ -3,7 +3,9 @@ package com.example.androidapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -42,7 +44,6 @@ public class AddNew extends AppCompatActivity {
         cv.put(DataContract.DBEntry.COLUMN_NAME,name);
         cv.put(DataContract.DBEntry.COLUMN_TEMP,temp);
         msqlDB.insert(DataContract.DBEntry.TABLE_NAME,null,cv);
-        //mAdapter.swapCursor(getAllItems());
         mEditTextName.getText().clear();
         mEditTextTemp.getText().clear();
 
